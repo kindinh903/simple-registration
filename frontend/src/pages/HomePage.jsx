@@ -1,4 +1,5 @@
 import { Typography, Box, Paper } from "@mui/material";
+import NavigationButtons from "../components/NavigationButtons.jsx";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
         <Typography align="center" sx={{ mt: 2 }}>
           Đây là trang chủ demo.
         </Typography>
+        <NavigationButtons excludePaths={["/"]} />
       </Paper>
     </Box>
   );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Box, TextField, Button, Typography, CircularProgress, Paper } from "@mui/material";
 import MessageBox from "../components/MessageBox.jsx";
+import NavigationButtons from "../components/NavigationButtons.jsx";
 
 export default function LoginPage() {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
@@ -75,6 +76,7 @@ export default function LoginPage() {
             {isSubmitting ? <CircularProgress size={24} color="inherit" /> : "Đăng nhập"}
           </Button>
         </Box>
+        <NavigationButtons excludePaths={["/login"]} />
       </Paper>
     </Box>
   );
