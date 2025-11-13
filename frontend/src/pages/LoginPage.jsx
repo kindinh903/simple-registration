@@ -28,7 +28,7 @@ export default function LoginPage() {
         </Typography>
         <Box component="form" onSubmit={handleSubmit(onSubmit)}>
           <TextField
-            label="Email"
+            label="Email (test@example.com successful case demo)"
             {...register("email", {
               required: "Email là bắt buộc.",
               pattern: {
@@ -44,7 +44,7 @@ export default function LoginPage() {
             helperText={errors.email?.message}
           />
           <TextField
-            label="Mật khẩu"
+            label="Password (password123 successful case demo)"
             {...register("password", {
               required: "Mật khẩu là bắt buộc.",
               minLength: {
